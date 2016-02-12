@@ -5,6 +5,34 @@
     <div id="gererAnnonces">
      <p>Ajouter une annonce</p>
     </div>
+
+    <form method="POST" action="{{path('fsp_validerajouter')}}" class="formAjouter">
+      <div class="ajouter">
+       <label> Date : </label>
+       <input id="info" type="date" name="date"/>
+       <label> Titre : </label>
+       <input id="info" type="text" name="titre"/>
+       <label> Contenu de l'annonce : </label>
+       <textarea id="info" name="contenu"></textarea>
+       <label> Langue : </label>
+       <select name="langue" id="langue">
+        <option value='Toutes les langues' select="selected">Toutes les langues</option>
+        <option value="Français">Français</option>
+        <option value='Anglais'>Anglais</option>
+        <option value='Chinois'>Chinois</option>
+       </select>
+       <label> Thème : </label>
+       <select name="theme" id="theme">
+        <option value="Tous les themes" select="selected">Tous les thèmes</option>
+        <option value="Logement">Logement</option>
+        <option value="Cours">Cours</option>
+        <option value="Evenement">Evénement</option>
+        <option value="Culture">Culture</option>
+       </select>
+       <input id="validerIns" type="submit" value="Valider" name="valider"/>
+       <input id="annulerIns" type="reset" value="Annuler" name="annuler"/>
+      </div>
+    </form>
    </div>
   </div>
 {% endblock %}

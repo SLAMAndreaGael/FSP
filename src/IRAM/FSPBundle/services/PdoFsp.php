@@ -76,6 +76,11 @@ class PdoFsp{
 	$req = "insert into profil values('$email','$nom','$prenom','$dateNaissance','$pays','$mdp')";
 		PdoFsp::$monPdo->exec($req);
 	}
+        
+       	public function ajouterAnnonce($date,$titre,$contenu,$refnomlangue,$refemail,$refidtheme,$refidetat){
+		$req = "insert into annonce values('','$date','$titre','$contenu','$refnomlangue,'$refemail','$refidtheme','$refidetat')";
+		PdoFsp::$monPdo->exec($req);
+	}
 
 }
 ?>	

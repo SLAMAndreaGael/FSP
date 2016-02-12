@@ -54,6 +54,9 @@ fsp_ajouter:
     path:    /ajouter-annonce
     defaults: { _controller: FSPBundle:User:ajouterAnnonce }
 
+fsp_validerajouter:
+    path:   /validerajouter
+    defaults: { _controller: FSPBundle:User:validerajouter }
 fsp_modifier:
     path:   /modifier-annonce
     defaults: { _controller: FSPBundle:User:modifierAnnonce }
